@@ -1,12 +1,22 @@
-# Real Time Object Detection App for Visually Impaired People
+# Real Time Money Detection App for Visually Impaired People
 
-A new Flutter project on Real Time Object Detection App with Speech assistance for visually impaired people using TensorFlow Lite.
+A Continuation of [@gulshankumarpal](https://github.com/gulshankumarpal) project adapted for money recognition in real time for Brazilian currency "Real".
 
-## Plugins Used
-camera: ^0.9.4+5 <br>
-tflite: ^1.1.2 <br>
-flutter_tts: ^3.3.3 <br>
+## Flutter
+### Version
+```
+Flutter 2.10.5 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 5464c5bac7 (5 months ago) • 2022-04-18 09:55:37 -0700
+Engine • revision 57d3bac3dd
+Tools • Dart 2.16.2 • DevTools 2.9.2
+```
 
-## App Screenshots
-
-![App Screenshots](https://user-images.githubusercontent.com/50909936/170841850-1242aa8c-d5f0-4a10-9e8d-8c902d94fce6.png)
+### Dependencies
+```
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  camera: ^0.10.0+1
+  tflite: ^1.1.2
+  flutter_tts: ^3.3.3
+```
