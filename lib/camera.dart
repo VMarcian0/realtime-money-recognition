@@ -47,14 +47,15 @@ class _CameraState extends State<Camera> {
               bytesList: img.planes.map((plane) {
                 return plane.bytes;
               }).toList(),
-              model: widget.model == yolo ? "YOLO" : "SSDMobileNet",
+              model: widget.model,
               imageHeight: img.height,
               imageWidth: img.width,
-              imageMean: widget.model == yolo ? 0 : 127.5,
-              imageStd: widget.model == yolo ? 255.0 : 127.5,
+              imageMean: 127.5,
+              imageStd: 127.5,
               numResultsPerClass: 1,
-              threshold: widget.model == yolo ? 0.2 : 0.6,
+              threshold: 0.6,
             ).then((recognitions) {
+              print(recognitions);
               widget.setRecognitions(recognitions!, img.height, img.width);
               isDetecting = false;
             });

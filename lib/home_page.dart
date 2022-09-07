@@ -37,10 +37,19 @@ class _HomePageState extends State<HomePage> {
         ))!;
         break;
 
+      case teachable:
+        res = (await Tflite.loadModel(
+          model: "assets/teachablemachine.tflite",
+          labels: "assets/teachablemachine.txt",
+        ))!;
+        break;
+
       default:
         res = (await Tflite.loadModel(
-            model: "assets/ssd_mobilenet.tflite",
-            labels: "assets/ssd_mobilenet.txt"))!;
+          model: "assets/ssd_mobilenet.tflite",
+          labels: "assets/ssd_mobilenet.txt",
+        ))!;
+        break;
     }
     //print(res);
   }
@@ -94,6 +103,23 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.deepPurpleAccent, width: 2),
                     ),
                     onPressed: () => onSelect(ssd),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                    width: 100,
+                  ),
+                  OutlinedButton(
+                    child: const Text(
+                      teachable,
+                      style: TextStyle(
+                          fontSize: 18, color: Colors.deepPurpleAccent),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      primary: Colors.deepPurple,
+                      side: const BorderSide(
+                          color: Colors.deepPurpleAccent, width: 2),
+                    ),
+                    onPressed: () => onSelect(teachable),
                   ),
                   const SizedBox(
                     height: 20,
